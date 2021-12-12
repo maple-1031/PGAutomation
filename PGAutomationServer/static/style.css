@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+html {
+    height: 100%;
+    font-family: "メイリオ", "Meiryo";
+}
+
+body {
+    background-color: #F5F5F5;
+    height: 100%;
+    /* height: calc(100%-60px); */
+}
+
+.flow-container {
+    height: 60px;
+    width: 100%;
+    padding-top: 50px;
+}
+
+.flow-container ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+    /* position: relative; */
+}
+
+.flow-list {
+    top: 20px;
+    height: 60px;
+    width: 60px;
+    border: 2px solid #dddddd;
+    border-radius: 30px;
+    text-align: center;
+    padding-top: 0px;
+    font-size: 35px;
+    color: #dddddd;
+    user-select: none;
+    cursor: pointer;
+    line-height: 60px;
+}
+
+.flow-selected {
+    height: 84px;
+    width: 84px;
+    border: 2px solid #2A99FB;
+    border-radius: 42px;
+    color: #2A99FB;
+    line-height: 84px;
+}
+
+.main-container {
+    display: flex;
+    padding: 40px 40px 0 40px;
+    justify-content: space-between;
+}
+
+.main-left {
+    background-color: #ffffff;
+    height: 650px;
+    width: 68.75%;
+    display: flex;
+    border: 3px solid #2A99FB;
+    border-radius: 30px;
+    justify-content: flex-end;
+}
+
+.main-right {
+    background-color: #ffffff;
+    height: 650px;
+    width: 28%;
+    border: 3px solid #2A99FB;
+    border-radius: 30px;
+}
+
+.v-line {
+    position: relative;
+    display: block;
+    width: 2px;
+    height: 600px;
+    background-color: #dddddd;
+    top: 25px;
+}
+
+#pdf-upload {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 100%;
+}
+
+#pdf-upload span {
+    font-size: 20px;
+    color: #8f8f8f;
+    /* margin-top: 200px; */
+    margin-bottom: 30px;
+}
+
+#pdf-upload-btn {
+    width: 100px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid #2A99FB;
+    border-radius: 20px;
+    font-size: 12px;
+    color: #2A99FB;
+    font-weight: 700;
+}
+
+#pdf-upload-btn:hover {
+    cursor: pointer;
+    background-color: #2A99FB;
+    color: #ffffff;
+}
+
+#order-edit {
+    will-change: transform;
+    height: 100%;
+    position: relative;
+    transition: all 200ms 0ms ease;
+    width: 650px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.content-2#order-edit {
+    width: 100%;
+}
+
+.order-overlay {
+    background-color: #F5F5F5;
+}
+
+#order-num-overlay {
+    position: absolute;
+    height: 40px;
+    width: 70px;
+    top: 30px;
+    left: 60px;
+}
+
+#order-num-input-overlay {
+    position: absolute;
+    height: 40px;
+    width: 130px;
+    top: 30px;
+    left: 150px;
+}
+
+#order-save-overlay {
+    position: absolute;
+    height: 40px;
+    width: 60px;
+    top: 30px;
+    left: 500px;
+}
+
+#order-element-container-overlay {
+    position: absolute;
+    height: 530px;
+    width: 550px;
+    top: 100px;
+    left: 30px;
+}
+
+#order-num {
+    position: absolute;
+    height: 40px;
+    width: 70px;
+    top: 31px;
+    left: 60px;
+    line-height: 40px;
+    font-size: 20px;
+    color: #8f8f8f;
+}
+
+#order-num-input {
+    position: absolute;
+    height: 40px;
+    width: 130px;
+    top: 30px;
+    left: 150px;
+}
+
+#order-save {
+    height: 40px;
+    width: 60px;
+    margin-right: 60px;
+}
+
+#order-element-container {
+    position: absolute;
+    background-color: #F5F5F5;
+    height: 530px;
+    width: 550px;
+    top: 100px;
+    left: 30px;
+    transition: all 200ms 0ms ease;
+}
+
+.order-content#order-element-container {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+#input-order-num {
+    height: 40px;
+    width: 100px;
+    border: 2px solid #8f8f8f;
+    border-radius: 20px;
+    padding-left: 20px;
+}
+
+#order-save-btn {
+    width: 60px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid #2A99FB;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #2A99FB;
+    font-weight: 700;
+}
+
+#order-save-btn:hover {
+    cursor: pointer;
+    background-color: #2A99FB;
+    color: #ffffff;
+}
+
+.order-content-hidden {
+    display: none;
+}
+
+.hidden-2 {
+    display: none;
+}
+
+.order-top-wrapper {
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+    justify-content: space-between;
+}

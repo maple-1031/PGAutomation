@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/jquery.js"></script>
+    <script src="/static/main.js"></script>
+</head>
+
+<body>
+    <div class="flow-container">
+        <ul>
+            <li class="flow-list flow-selected">1</li>
+            <li class="flow-list">2</li>
+            <li class="flow-list">3</li>
+        </ul>
+    </div>
+    <div class="main-container">
+        <div class="main-left">
+            <div class="content-1" id="pdf-upload">
+                <span>PDFをアップロード</span>
+                <input type="file" name="input-file" id="pdf-upload-hidden" style="display: none;">
+                <button id="pdf-upload-btn">ファイルを選択</button>
+            </div>
+            <div class="content-1 v-line"></div>
+            <div id="order-edit">
+                <div class="order-overlay" id="order-num-overlay"></div>
+                <div class="order-overlay" id="order-num-input-overlay"></div>
+                <div class="order-overlay" id="order-save-overlay"></div>
+                <div class="order-top-wrapper">
+                    <div class="order-num-wrapper">
+                        <div class="order-content-hidden" id="order-num">手順数</div>
+                        <div class="order-content-hidden" id="order-num-input">
+                            <input type="number" name="input-order-num" id="input-order-num" min="1" max="20">
+                        </div>
+                    </div>
+                    <div class="order-content-hidden" id="order-save">
+                        <button id="order-save-btn">保存</button>
+                    </div>
+                </div>
+                <div class="order-overlay" id="order-element-container-overlay"></div>
+                <div class="order-content-hidden" id="order-element-container"></div>
+            </div>
+        </div>
+        <div class="main-right">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae numquam modi dicta?
+            Cumque, nihil veniam aut, quaerat error nam ullam doloribus earum id ipsa tempore perferendis? Optio quasi
+            sed tempora?</div>
+    </div>
+</body>
+
+</html>

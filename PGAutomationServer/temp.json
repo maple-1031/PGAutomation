@@ -1,0 +1,136 @@
+{
+    "title": "無限ダンジョンゲームを作ろう！！",
+    "left": {
+        "head": "完成形を確認しよう",
+        "url": "Unity_T11_Demo.mp4"
+    },
+    "right": {
+        "head": "手順",
+        "list": [
+            {
+                "head": "機能分解をしよう！",
+                "link": {
+                    "title": "手順0. 機能分解をしよう！",
+                    "left": {
+                        "head": "",
+                        "url": "Unity_T11_01.png"
+                    },
+                    "right": {
+                        "head": "完成形をダウンロードしよう",
+                        "url": "Unity_T11_Demo.zip"
+                    }
+                }
+            },
+            {
+                "head": "初期ファイル",
+                "link": {
+                    "title": "手順1. 初期ファイルをダウンロードしよう！",
+                    "center":[
+                        {
+                            "left":{
+                                "head": "",
+                                "url": "Unity_T11_01.png"
+                            },
+                            "right":{
+                                "head": "初期ファイルをダウンロードしよう！",
+                                "url": "Unity_T11_01.unitypackage"
+                            }
+                        }
+                    ]
+                        
+                }
+            },
+            {
+                "head": "プレーヤーの動きを作ろう！",
+                "link": {
+                    "title": "手順2. プレーヤーの動きを作ろう！",
+                    "center": [
+                        {
+                            "left":{
+                                "head": "",
+                                "url": "Unity_T11_02.mp4"
+                            },
+                            "right":{
+                                "head": "",
+                                "url": "Unity_T11_02.png"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "head": "【新知識】プレーヤーが進んだらマップを追加しよう！",
+                "link": {
+                    "title": "手順3. 【新知識】プレーヤーが進んだらマップを追加しよう！",
+                    "center":[
+                        {
+                            "left":{
+                                "head": "",
+                                "url": "Unity_T11_03.mp4"
+                            },
+                            "right":{
+                                "head": "",
+                                "url": "Unity_T11_03.png"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "head": "【新知識】常にステージを３つ存在させよう！",
+                "link": {
+                    "title": "手順4. 【新知識】常にステージを３つ存在させよう！",
+                    "center":[
+                        {
+                            "left":{
+                                "head": "",
+                                "url": "Unity_T11_04.mp4"
+                            },
+                            "right":{
+                                "head": "",
+                                "url": "Unity_T11_04.png"
+                            }
+                        }
+                    ]
+                    
+                }
+            },
+            {
+                "head": "鬼が追いかけてくるようにしよう！",
+                "link": {
+                    "title": "手順5. 鬼が追いかけてくるようにしよう！",
+                    "center":[
+                        {
+                            "left":{
+                                "head": "",
+                                "url": "Unity_T11_05.mp4"
+                            },
+                            "right":{
+                                "head": "",
+                                "url": "Unity_T11_05.png"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "head": "ゲームオーバーを作ろう！",
+                "link": {
+                    "title": "手順6. ゲームオーバーを作ろう！",
+                    "center":[
+                        {
+                            "left":{
+                                "head": "",
+                                "url": "Unity_T11_06.mp4"
+                            },
+                            "right":{
+                                "head": "",
+                                "url": "Unity_T11_06.png"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
