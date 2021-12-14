@@ -26,11 +26,11 @@ $(function () {
                 console.log(result);
                 for (let i = 0; i < result.length; i++) {
                     const element = result[i];
-                    var imgWrapper = document.getElementById("order-element-container");
+                    var imgWrapper = document.getElementsByClassName("order-element")[0];
                     var newImg = document.createElement("img");
                     console.log("../static/" + element);
                     newImg.setAttribute("src", "../static/" + element);
-                    newImg.setAttribute("width", "200px");
+                    newImg.setAttribute("height", "80%");
                     imgWrapper.appendChild(newImg);
                 }
             }
@@ -42,15 +42,9 @@ $(function () {
 $(function () {
     $(document).on("change", "#input-order-num", function () {
         console.log($("#input-order-num").val());
-    })
-})
-
-$(function () {
-    $(".main-right").on("click", function () {
-        console.log($("#pdf-upload-hidden".val()));
-        var n = $("#pdf-upload-hidden").val();
+        var n = $("#input-order-num").val();
         for (let i = 0; i < n; i++) {
-            
+            console.log(i);
         }
     });
 });

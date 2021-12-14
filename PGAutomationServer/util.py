@@ -8,7 +8,7 @@ def parce_pdf():
     UPLOAD_FILE = list(UPLOAD_FOLDER.glob("*.pdf"))[0]
     if len(list(UPLOAD_FOLDER.glob("*.pdf"))) == 0:
         return False
-    pages = convert_from_path(UPLOAD_FILE, 800)
+    pages = convert_from_path(UPLOAD_FILE, 200)
 
     for i, page in enumerate(pages):
         file_name = f"{i}.png"

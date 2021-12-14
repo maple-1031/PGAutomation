@@ -252,3 +252,12 @@ body {
     margin-top: 30px;
     justify-content: space-between;
 }
+
+.order-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px;
+    height: 300px;
+    background-color: #2A99FB;
+}

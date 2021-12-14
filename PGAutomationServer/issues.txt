@@ -1,0 +1,7 @@
+#
+Pillowがインポートできない
+ImportError: cannot import name 'Image' from 'PIL' (unknown location)
+
+anaconda promptにて
+$pip uninstall Pillow
+$pip install Pillow
