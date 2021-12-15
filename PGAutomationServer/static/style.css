@@ -261,4 +261,9 @@ body {
     width: 200px;
     height: 300px;
     background-color: #2A99FB;
+    overflow: scroll;
+}
+
+.order-element > img {
+    
 }

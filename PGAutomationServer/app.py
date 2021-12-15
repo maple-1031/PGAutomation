@@ -3,7 +3,7 @@ from flask import Flask, json, redirect, request, render_template, send_file, js
 from werkzeug.utils import secure_filename
 import util
 
-UPLOAD_FOLDER = r".\PDF"
+UPLOAD_FOLDER = r"./PDF"
 ALLOWED_EXTENSIONS = {"pdf"}
 
 app = Flask(__name__)
@@ -21,14 +21,16 @@ def root():
 
 @app.route('/send', methods=['POST'])
 def send():
-    os.chdir(os.path.dirname(os.path.abspath(__file__)))
-    input_pdf = request.files.get("input-file")
-    print(input_pdf.filename)
-    if input_pdf and allowed_file(input_pdf.filename):
-        filename = input_pdf.filename
-        print(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-        input_pdf.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-    n = util.parce_pdf()
+    # os.chdir(os.path.dirname(os.path.abspath(__file__)))
+    # input_pdf = request.files.get("input-file")
+    # print(input_pdf.filename)
+    # if input_pdf and allowed_file(input_pdf.filename):
+    #     filename = input_pdf.filename
+    #     print(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+    #     input_pdf.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+        
+    # n = util.parce_pdf()
+    n = 3
     if n != False:
         return_data = {"result": util.create_response(n)}
         print(return_data)

@@ -13,7 +13,8 @@ $(function () {
         $.ajax({
             type:"POST",
             url:"/send",
-            data: sendData,
+            // data: sendData,
+            data: {"aaa": "aaaaa"},
             contentType: false,
             processData: false,
             success: function (data) {
@@ -31,7 +32,7 @@ $(function () {
                     var newImg = document.createElement("img");
                     console.log("../static/" + element);
                     newImg.setAttribute("src", "../static/" + element);
-                    newImg.setAttribute("height", "80%");
+                    newImg.setAttribute("height", "50%");
                     newImg.setAttribute("width", "auto");
                     imgWrapper.appendChild(newImg);
                 }
@@ -64,7 +65,8 @@ $(function () {
             for (let i = 0; i < ipp; i++) {
                 if (localResult[i] != undefined) {
                     var newImg = document.createElement("img");
-                    newImg.setAttribute("src", "../static/" + localResult[i])
+                    newImg.setAttribute("src", "../static/" + localResult[0]);
+                    newImg.setAttribute("height", `$(Math.floor(100/ipp))%`);
                     console.log(result, localResult);
                     localResult.shift();
                     newImgWrapper.appendChild(newImg);
