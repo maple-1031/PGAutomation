@@ -208,6 +208,7 @@ body {
 .order-content#order-element-container {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     width: 90%;
     justify-content: space-around;
     align-content: space-around;
