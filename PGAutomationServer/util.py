@@ -1,4 +1,5 @@
 import os
+from PIL import Image
 from pdf2image import convert_from_path
 from pathlib import Path
 # os.chdir(os.path.dirname(os.path.abspath(__file__)))
@@ -19,3 +20,8 @@ def parce_pdf():
 def create_response(n: int):
     ret = [f"{s}.png" for s in range(n)]
     return ret
+
+def getAspectRatio():
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
+    img = Image.open("./static/0.png")
+    return img.size[0] / img.size[1]

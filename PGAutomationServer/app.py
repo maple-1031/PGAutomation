@@ -34,7 +34,7 @@ def send():
     if n != False:
         return_data = {"result": util.create_response(n)}
         print(return_data)
-        return jsonify(responseResult=json.dumps(return_data))
+        return jsonify(responseResult=json.dumps(return_data), aspectRatio=util.getAspectRatio())
     else:
         return None
 

@@ -18,12 +18,14 @@ $(function () {
             contentType: false,
             processData: false,
             success: function (data) {
+                console.log(data);
                 $("#order-edit").toggleClass("content-2")
                 $(".order-overlay").fadeOut(300);
                 $(".content-1").hide();
                 $(".order-content-hidden").addClass("order-content");
                 $(".order-content-hidden").removeClass("order-content-hidden");
                 result = JSON.parse(data.responseResult).result;
+                aspectRatio = data.aspectRatio;
                 document.getElementById("order-element-container").setAttribute("data-imgnum", result.length.toString())
                 console.log(result);
                 for (let i = 0; i < result.length; i++) {
@@ -32,8 +34,11 @@ $(function () {
                     var newImg = document.createElement("img");
                     console.log("../static/" + element);
                     newImg.setAttribute("src", "../static/" + element);
-                    newImg.setAttribute("height", "50%");
-                    newImg.setAttribute("width", "auto");
+                    // newImg.setAttribute("height", "50%");
+                    // newImg.setAttribute("width", "auto");
+                    var ipp = 3;
+                    console.log($(".order-element"));
+                    newImg.setAttribute("style", `height:${$(this).parent().outerHeight()*(Math.floor(1/ipp)-0.05)}px;width:${(Math.floor(100/ipp)-5)*aspectRatio}%;`)
                     imgWrapper.appendChild(newImg);
                 }
             }
@@ -53,7 +58,6 @@ $(function () {
                 element.remove();
             }
         }
-        console.log($("#input-order-num").val());
         var n = $("#input-order-num").val();
         var elementWrapper = document.getElementById("order-element-container");
         var localResult = result.slice();
@@ -61,13 +65,15 @@ $(function () {
             var ipp = Math.ceil(result.length / n)//images per page
             var newImgWrapper = document.createElement("div");
             newImgWrapper.className = "order-element";
-            console.log(ipp);
+            console.log(ipp, localResult);
             for (let i = 0; i < ipp; i++) {
-                if (localResult[i] != undefined) {
+                if (localResult[0] != undefined) {
+                    console.log(localResult[i]);
                     var newImg = document.createElement("img");
                     newImg.setAttribute("src", "../static/" + localResult[0]);
-                    newImg.setAttribute("height", `$(Math.floor(100/ipp))%`);
-                    console.log(result, localResult);
+                    // newImg.setAttribute("height", `$(Math.floor(100/ipp))%`);
+                    // newImg.setAttribute("width", "auto");
+                    newImg.setAttribute("style", `height:${Math.floor(100/ipp)-5}%;width:auto;`)
                     localResult.shift();
                     newImgWrapper.appendChild(newImg);
                 }
