@@ -138,6 +138,10 @@ body {
     background-color: #F5F5F5;
 }
 
+.order-num-wrapper {
+    display: flex;
+}
+
 #order-num-overlay {
     position: absolute;
     height: 40px;
@@ -171,22 +175,23 @@ body {
 }
 
 #order-num {
-    position: absolute;
+    /* position: absolute; */
     height: 40px;
     width: 70px;
-    top: 31px;
-    left: 60px;
+    /* top: 31px;
+    left: 60px; */
     line-height: 40px;
     font-size: 20px;
     color: #8f8f8f;
+    margin-left: 60px;
 }
 
 #order-num-input {
-    position: absolute;
+    /* position: absolute; */
     height: 40px;
     width: 130px;
-    top: 30px;
-    left: 150px;
+    /* top: 30px;
+    left: 150px; */
 }
 
 #order-save {
@@ -203,6 +208,7 @@ body {
     top: 100px;
     left: 30px;
     transition: all 200ms 0ms ease;
+    overflow: scroll;
 }
 
 .order-content#order-element-container {
@@ -211,7 +217,6 @@ body {
     flex-wrap: wrap;
     width: 90%;
     justify-content: space-around;
-    align-content: space-around;
 }
 
 #input-order-num {
@@ -222,7 +227,13 @@ body {
     padding-left: 20px;
 }
 
-#order-save-btn {
+#input-order-num:read-only {
+    border: 2px solid #8f8f8f;
+    background-color: #dddddd;
+    cursor: default;
+}
+
+.blue-btn {
     width: 60px;
     height: 40px;
     background-color: transparent;
@@ -233,10 +244,35 @@ body {
     font-weight: 700;
 }
 
-#order-save-btn:hover {
+.blue-btn:hover {
     cursor: pointer;
     background-color: #2A99FB;
     color: #ffffff;
+}
+
+.red-btn {
+    width: 60px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid #FA4C43;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #FA4C43;
+    font-weight: 700;
+}
+
+.red-btn:hover {
+    cursor: pointer;
+    background-color: #FA4C43;
+    color: #ffffff;
+}
+
+#order-save-btn {
+
+}
+
+#order-save-btn:hover {
+
 }
 
 .order-content-hidden {
@@ -257,13 +293,30 @@ body {
 .order-element {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    width: 200px;
-    height: 300px;
+    width: 150px;
+    height: 250px;
     background-color: #2A99FB;
     overflow: visible;
+    margin-bottom: 5px;
 }
 
 .order-element > img {
     margin-bottom: 2px;
+}
+
+#order-decision {
+    margin-left: 20px;
+}
+
+#order-decision.red-btn:hover::after{
+    content: "変更すると設定した\Aレイアウトは失われます";
+    white-space: pre;
+    margin-left: 20px;
+    top: 30px;
+    /* bottom: 10px; */
+    position: absolute;
+    background-color: #dddddd;
+    border-radius: 5px;
 }

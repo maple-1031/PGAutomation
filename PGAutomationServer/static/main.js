@@ -38,7 +38,7 @@ $(function () {
                     // newImg.setAttribute("width", "auto");
                     var ipp = 3;
                     imgWrapperHeight = $(imgWrapper).height()
-                    var imgHeight = imgWrapperHeight * (1 / ipp - 0.05);
+                    var imgHeight = imgWrapperHeight * (1 / ipp - 0.01);
                     var imgWidth = imgHeight * aspectRatio;
                     newImg.setAttribute("style", `height:${imgHeight}px;width:${imgWidth}px;`)
                     imgWrapper.appendChild(newImg);
@@ -73,7 +73,7 @@ $(function () {
                     console.log(localResult[i]);
                     var newImg = document.createElement("img");
                     newImg.setAttribute("src", "../static/" + localResult[0]);
-                    var imgHeight = imgWrapperHeight * (1 / ipp - 0.05);
+                    var imgHeight = imgWrapperHeight * (1 / ipp - 0.01);
                     var imgWidth = imgHeight * aspectRatio;
                     newImg.setAttribute("style", `height:${imgHeight}px;width:${imgWidth}px;`)
                     localResult.shift();
@@ -85,3 +85,18 @@ $(function () {
         }
     });
 });
+
+$(function () {
+    $(document).on("click", "#order-decision", function () {
+        // console.log($(this).class());
+        if ($(this).hasClass("blue-btn")) {
+            $(this).html("変更");
+            $("#input-order-num").attr("readonly", true);
+            $(this).toggleClass("red-btn blue-btn");
+        } else {
+            $(this).html("決定");
+            $("#input-order-num").attr("readonly", false);
+            $(this).toggleClass("red-btn blue-btn");
+        }
+    })
+})
