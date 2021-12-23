@@ -11,10 +11,10 @@ $(function () {
         console.log(sendData.get("input-file"));
         // var sendData = JSON.stringify({"input-file": $("pdf-upload-hidden").val()});
         $.ajax({
-            type:"POST",
-            url:"/send",
+            type: "POST",
+            url: "/send",
             // data: sendData,
-            data: {"aaa": "aaaaa"},
+            data: { "aaa": "aaaaa" },
             contentType: false,
             processData: false,
             success: function (data) {
@@ -30,15 +30,17 @@ $(function () {
                 console.log(result);
                 for (let i = 0; i < result.length; i++) {
                     const element = result[i];
-                    var imgWrapper = document.getElementsByClassName("order-element")[0];
+                    imgWrapper = document.getElementsByClassName("order-element")[0];
                     var newImg = document.createElement("img");
                     console.log("../static/" + element);
                     newImg.setAttribute("src", "../static/" + element);
                     // newImg.setAttribute("height", "50%");
                     // newImg.setAttribute("width", "auto");
                     var ipp = 3;
-                    console.log($(".order-element"));
-                    newImg.setAttribute("style", `height:${$(this).parent().outerHeight()*(Math.floor(1/ipp)-0.05)}px;width:${(Math.floor(100/ipp)-5)*aspectRatio}%;`)
+                    imgWrapperHeight = $(imgWrapper).height()
+                    var imgHeight = imgWrapperHeight * (1 / ipp - 0.05);
+                    var imgWidth = imgHeight * aspectRatio;
+                    newImg.setAttribute("style", `height:${imgHeight}px;width:${imgWidth}px;`)
                     imgWrapper.appendChild(newImg);
                 }
             }
@@ -71,9 +73,9 @@ $(function () {
                     console.log(localResult[i]);
                     var newImg = document.createElement("img");
                     newImg.setAttribute("src", "../static/" + localResult[0]);
-                    // newImg.setAttribute("height", `$(Math.floor(100/ipp))%`);
-                    // newImg.setAttribute("width", "auto");
-                    newImg.setAttribute("style", `height:${Math.floor(100/ipp)-5}%;width:auto;`)
+                    var imgHeight = imgWrapperHeight * (1 / ipp - 0.05);
+                    var imgWidth = imgHeight * aspectRatio;
+                    newImg.setAttribute("style", `height:${imgHeight}px;width:${imgWidth}px;`)
                     localResult.shift();
                     newImgWrapper.appendChild(newImg);
                 }
