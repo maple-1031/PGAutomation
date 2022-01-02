@@ -1,4 +1,4 @@
-$(document).on("click", "#pdf-upload-btn", function () {
+ $(document).on("click", "#pdf-upload-btn", function () {
     $("#pdf-upload-hidden").click();
 });
 
@@ -71,18 +71,34 @@ $(function () {
             for (let i = 0; i < ipp; i++) {
                 if (localResult[0] != undefined) {
                     console.log(localResult[i]);
+                    var newImgDiv = document.createElement("div");
                     var newImg = document.createElement("img");
+                    newImgDiv.className = "img-pseudo";
                     newImg.setAttribute("src", "../static/" + localResult[0]);
                     var imgHeight = imgWrapperHeight * (1 / ipp - 0.01);
                     var imgWidth = imgHeight * aspectRatio;
                     newImg.setAttribute("style", `height:${imgHeight}px;width:${imgWidth}px;`)
                     localResult.shift();
-                    newImgWrapper.appendChild(newImg);
+                    newImgDiv.appendChild(newImg);
+                    newImgWrapper.appendChild(newImgDiv);
                 }
             }
 
             elementWrapper.appendChild(newImgWrapper)
+
         }
+        var firstImgDiv = $(".order-element>div:first-child").get();
+        firstImgDiv.forEach(element => {
+            var movementBackIcon = document.createElement("div");
+            movementBackIcon.className = "movement-back-icon";
+            element.appendChild(movementBackIcon);
+        });
+        var lastImgDiv = $(".order-element>div:last-child").get();
+        lastImgDiv.forEach(element => {
+            var movementForwardIcon = document.createElement("div");
+            movementForwardIcon.className = "movement-forward-icon";
+            element.appendChild(movementForwardIcon);
+        });
     });
 });
 

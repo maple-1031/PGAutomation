@@ -267,13 +267,9 @@ body {
     color: #ffffff;
 }
 
-#order-save-btn {
+#order-save-btn {}
 
-}
-
-#order-save-btn:hover {
-
-}
+#order-save-btn:hover {}
 
 .order-content-hidden {
     display: none;
@@ -302,31 +298,79 @@ body {
     margin-bottom: 5px;
 }
 
-.order-element > img {
+.order-element>div {
     margin-bottom: 2px;
     position: relative;
 }
 
-.order-element > img:first-child::before {
-    content: "yukachan";
+.movement-back-icon {
     display: inline-block;
-    width: 6px;
-    height: 6px;
-    border: 0;
-    border-top: solid 2px #333;
-    border-left: solid 2px #333;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 10px 8px 0;
+    border-color: transparent #8f8f8f transparent transparent;
     position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: -4px;
-    transform: rotate(-45deg);
+    top: 40%;
+    left: 20%;
 }
+
+.movement-forward-icon {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 0 8px 10px;
+    border-color: transparent transparent transparent #8f8f8f;
+    position: absolute;
+    top: 40%;
+    left: 70%;
+}
+
+.movement-back-icon, .movement-forward-icon:hover {
+    cursor: pointer;
+}
+
+/* .order-element>div:first-child::before {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 10px 8px 0;
+    border-color: transparent #8f8f8f transparent transparent;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+}
+
+.order-element>div:last-child::after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 0 8px 10px;
+    border-color: transparent transparent transparent #8f8f8f;
+    position: absolute;
+    top: 40%;
+    left: 70%;
+    z-index: 111;
+}
+
+.order-element>div:first-child:hover::before {
+    cursor: pointer;
+}
+
+.order-element>div:last-child:hover::after {
+    cursor: pointer;
+} */
 
 #order-decision {
     margin-left: 20px;
 }
 
-#order-decision.red-btn:hover::after{
+#order-decision.red-btn:hover::after {
     content: "変更すると設定した\Aレイアウトは失われます";
     white-space: pre;
     margin-left: 20px;
